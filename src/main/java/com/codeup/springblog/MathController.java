@@ -27,7 +27,7 @@ class MathController {
     @ResponseBody
     public String divide(@PathVariable int num1, @PathVariable int num2){
 
-        return "hey, user! quotient two numbers is : " + (num1/num2);
+        return "hey, user! quotient of two numbers is : " + (num1/num2);
     }
 
 //    @RequestMapping(path="/{math}/{num1}/and/{num2}", method = RequestMethod.GET)
