@@ -6,9 +6,14 @@
 </head>
 <body>
 
+<p>Create your new post!<br>
+    <a th:href="@{/posts/create}">Head to create a post!</a></p>
+
+
 <div th:each="post : ${allPosts}">
     <h3 th:text="${post.title}"></h3>
     <p th:text="${post.body}" />
+    <a th:href="@{'/posts/{id}'(id = ${post.id})}">Go to this post</a>
 </div>
 
 
