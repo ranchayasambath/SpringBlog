@@ -1,4 +1,4 @@
-package com.codeup.springblog;
+package model;
 
 public class Post {
 
