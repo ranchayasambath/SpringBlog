@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you wanna play a game? Punk??</title>
+</head>
+<body>
+Path var = <span th:text="${number}"></span>
+
+<h1>You feel lucky puck? Do ya? Pick a number and see what happens >:(</h1>
+<a href="/roll-dice/1">"I guess number 1"</a>
+<br>
+<a href="/roll-dice/2">"I guess number 2"</a>
+<br>
+<a href="/roll-dice/3">"I guess number 3"</a>
+<br>
+<a href="/roll-dice/4">"I guess number 4"</a>
+<br>
+<a href="/roll-dice/5">"I guess number 5"</a>
+<br>
+<a href="/roll-dice/6">"I guess number 6"</a>
+<br>
+<br>
+
+<div th:if="${number != null}">
+    <p>You guessed: <span th:text="${number}"></span> and the dice rolled a <span th:text="${randomNum}"></span>.
+    </p>
+
+    <p th:text="${message}"></p>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+First test: Can I see my path variable in my view?
+<br>
+
+Second test: Utilizing the anchor tags, do we see the path var come through successfully when our user navigates using those links?
+
+<br>
+
+Third test: In the backend, were values coming through okay?
+
+<br>
+
+Fourth test: Cool, let's put it all together and get those backend variables up to the view!
+
+
+
+
+</body>
+</html>

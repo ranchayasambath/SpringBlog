@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ad Page</title>
+</head>
+<body>
+
+<div th:each="ad : ${ads}">
+    <h4 th:text="${ad.title}" ></h4>
+    <p th:text="${ad.description}"></p>
+    <h3>Here are the categories for the ad:</h3>
+    <ul>
+        <li th:each="category : ${ad.categories}" th:text="${category.name}" />
+    </ul>
+
+</div>
+</body>
+</html>
