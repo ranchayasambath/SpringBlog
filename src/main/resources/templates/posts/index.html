@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Index of all posts</title>
+	<meta charset="UTF-8">
+	<title>Posts Index</title>
 </head>
 <body>
-
-<p>Create your new post!<br>
-    <a th:href="@{/posts/create}">Head to create a post!</a></p>
-
-
-<div th:each="post : ${allPosts}">
-    <h3 th:text="${post.title}"></h3>
-    <p th:text="${post.body}" />
-    <a th:href="@{'/posts/{id}'(id = ${post.id})}">Go to this post</a>
-</div>
-
-
+	<nav th:replace="partials :: navbar"></nav>
+	<div th:each="post : ${allPosts}">
+		<a th:href="@{/posts/{id}(id=${post.id})}">
+			<div>
+				<h1 th:text="${post.title}"></h1>
+				<p th:text="${post.body}"></p>
+			</div>
+		</a>
+	</div>
 </body>
 </html>

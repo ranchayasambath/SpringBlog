@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Create New Post</title>
+	<meta charset="UTF-8">
+	<title>Create Post</title>
 </head>
 <body>
-
-<form method="post" action="/posts/create">
-    <label for="title">Post title:
-        <input name="title" id="title" type="text">
-    </label>
-
-    <label for="body">Post body:
-        <input name="body" id="body" type="text">
-    </label>
-
-    <button type="submit">Save my post!</button>
-
-</form>
-
+	<nav th:replace="partials :: navbar"></nav>
+	<h1>Create New Post</h1>
+	<form th:action="@{/posts/create}" th:method="post" th:object="${post}">
+		<div th:replace="partials :: postForms"></div>
+		<input type="submit" value="Create Post">
+	</form>
 </body>
 </html>
